@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <title>P148</title>
+    </head>
+    <body>
+        <a-scene background="color:grey">
+            <a-entity id="camera" camera position="0 2 -1"></a-entity>
+            <a-assets>
+                <a-asset-item id="bench" src="assets/bench/scene.gltf"></a-asset-item>
+                <a-asset-item id="cat"   src="assets/cat/scene.gltf"></a-asset-item>
+                <a-asset-item id="girl"  src="assets/girl/scene.gltf"></a-asset-item>
+                <a-asset-item id="lamp"  src="assets/lamp_post/scene.gltf"></a-asset-item>
+            </a-assets>
+        <a-entity light="type:ambient;intensity:0.5" position="0 0 0"></a-entity>
+        <a-entity light="type:point;color:yellow;intensity:1.5;castShadow:true" position="8 4 -11.7"></a-entity>
+            <a-entity>
+                <a-box position="0 -3 -10" width="30" depth="9" src="https://th.bing.com/th/id/OIP.sQ7NqDxr_NBzO2WcjBy2CQHaDt?w=325&h=174&c=7&r=0&o=5&dpr=1.1&pid=1.7"></a-box>
+                <a-box position="0 6 -15" width="30" height="17" src="https://th.bing.com/th/id/OIP.0N7L9Ox3_0YDNGHYJOh5JwHaER?w=291&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7"></a-box>
+            </a-entity>
+            <a-entity> 
+                <a-entity position="3 -2.5 -12" rotation="0 0 0" scale="0.6 0.6 0.6" gltf-model="#bench" shadow="cast:true"></a-entity>
+            </a-entity>
+            <a-entity>
+                <a-entity position="8 -2.6 -11.7" rotation="0 0 0" scale="0.13 0.15 0.13" gltf-model="#lamp" shadow="cast:true"></a-entity>
+            </a-entity>
+            <a-entity>
+                <a-entity position="0 -2.6 -9.8" rotation="0 0 0" scale="0.004 0.004 0.004" gltf-model="#girl" shadow="cast:true"></a-entity>
+            </a-entity>
+            <a-entity>
+                <a-entity position="-5 -2.5 -9" rotation="0 -30 0" scale="0.1 0.1 0.1" gltf-model="#cat" shadow="cast:true"></a-entity>
+            </a-entity>
+        </a-scene>
+    </body>
+</html>
